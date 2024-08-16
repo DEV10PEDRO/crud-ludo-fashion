@@ -1,0 +1,542 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+
+:root {
+    --cor-primaria: #F464C3;
+    --cor-secundaria: #3D1C31;
+    --cor-tres: #FDACE0;
+    --branco: white;
+    --preto: black;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+}
+
+body {
+    flex-direction: column;
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+header {
+    background-color: var(--cor-primaria);
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+ 
+}
+
+header a:first-child {
+    font-size: 30px;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+
+}    
+
+#form-buscar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+#buscar {
+    flex-grow: 0.75;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+
+}
+
+.icon-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+#btn-buscar {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 11%;
+    cursor: pointer;
+
+
+}
+
+.nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    background-color: var(--cor-tres);
+    padding: 0.5rem;
+
+}
+
+nav a:first-child {
+    border-right: 1px solid var(--preto);
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+
+}
+
+nav a:last-child {
+    border-right: 1px solid var(--preto);
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+
+#banner {
+    width: 100%;
+    background-image: url(../imgs/rosa_mulheres.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+#txt-banner {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+
+}
+
+.conteudo {
+    margin: 1rem;
+}
+
+.conteudo h1 {
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    color: white;
+}
+
+.card {
+    border: 1px solid var(--cor-secundaria);
+    border-radius: 8px;
+    background-color: var(--cor-secundaria);
+
+}
+
+.card-img img {
+    border-radius: 8px 8px 0 0;
+    width: 100%;
+}
+
+.card-content {
+    color: var(--branco);
+    padding: 1rem;
+    text-align: center;
+    
+
+}
+
+/* formulario de cadastro*/
+.form-dados {
+    background-color: var(--cor-primaria);
+    width: 650px;
+    height: 580px;
+    margin: auto;
+    margin-top: 10rem;
+    border-radius: 10px;
+}
+
+
+
+.form-dados {
+    padding: 18px;
+
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+}
+
+
+.dados {
+    margin-bottom: 20px;
+    padding-bottom: 6px;
+    
+}
+
+.dados label {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.dados input{
+    width: 80%;
+    border-radius: 4px;
+    padding: 6px;
+    border: 2px solid #dfdfdf; 
+}
+
+input[type="submit"] {
+    width: 20%;
+    border-radius: 4px;
+    padding: 4px;
+    border: 2px solid #dfdfdf; 
+    
+}
+
+
+.form button {
+    display: grid;
+    background-color: var(--preto);
+    color: var(--branco);
+    width: 50%;
+    height: 35%;
+    padding-bottom: 50px;
+    border-radius: 4px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+/* fomulario para editar usuario */
+.content {
+    background-color: var(--cor-primaria);
+    width: 570px;
+    height: 450px;
+    margin: auto;
+    margin-top: 10rem;
+    border-radius: 10px;
+
+}
+
+.edit {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit h2 {
+    text-align: center;
+}
+
+.edit label {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit input {
+    width: 75%;
+    margin-left: 12%;
+    border-radius: 4px;
+    padding: 6px;
+    border: 2px solid #dfdfdf;
+}
+
+.edit button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 50%;
+    margin-left: 25%;
+    height: 35%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    padding: 8px;
+}
+/* Formulario de login */
+.login {
+    background-color: var(--cor-primaria);
+    align-items: center;
+    width: 400px;
+    height: 550px;
+    margin: auto;
+    margin-top: 10rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+    
+
+.container {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    width: 280px;
+
+}
+
+.container label{
+    display: flex;
+    font-size: 23px;
+
+}
+
+.container input {
+    outline: none;
+    border: 1px solid var(--preto);
+    padding: 18px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: gray;
+}
+
+
+.nav-login a {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--preto);
+
+}
+
+.nav-login a {
+    text-decoration: none;
+    color: var(--preto);
+}
+
+.nav-login a:hover {
+    color: grey;
+}
+
+#entrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 50%;
+    margin-left: 25%;
+    height: 35%;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    background-color: var(--preto);
+    color: var(--branco);
+    border: none;
+    padding: 8px;
+}
+
+.redes-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2.3rem;
+    margin: 0.1rem;
+}
+
+
+.redes-icon a {
+    text-decoration: none;
+    color: var(--preto);
+    font-size: 1.3rem;
+}
+
+.redes a {
+    margin: 3px;
+    
+
+}
+
+/* categorias */
+.categoria {
+    background-color: var(--cor-primaria);
+    width: 700px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10rem;
+    border-radius: 10px;
+}
+
+.categoria ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+    gap: 3rem;
+    padding: 1rem;
+    
+    
+}
+
+.categoria ul li a {
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+
+.card-footer {
+    display: flex;
+    display: grid;
+    flex-direction: column;
+    text-align: center;
+    grid-template-columns: repeat(5, 1fr);
+    padding: 1rem 1.5rem;
+    
+
+}
+
+.card-footer h3{
+    margin-bottom: 16px;
+    font-weight: 600px;
+    color: var(--preto)
+
+}
+
+.card-footer a {
+    color: rgb(57, 49, 49);
+    flex-direction: column;
+    grid-template-columns: none;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+.card-footer p {
+    color: black
+}
+
+
+.card-footer .redes-socias img{
+    margin-right: 10px;
+    
+    
+}
+
+
+.footer_subscribe {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+
+.input_group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.input_group {
+    all:unset;
+    padding: 0.75rem;
+    width: 100%;
+    
+}
+
+#div-img {
+    color: var(--preto);
+    width: 25px;
+    height: 10px;
+    padding-left: 4px;
+    position: relative;
+    right: 10%;
+
+    
+}
+
+    
+
+.footer_copyright {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.card-footer ul {
+    width: 100%;
+    margin-bottom: 200px;
+    list-style: none;
+    
+
+}
+
+.card-footer ul > p{
+    margin-bottom: 20px;
+
+}
+
+.card-footer li {
+    margin: 5px 0;
+
+}
+
+@media only screen and (max-width: 600px) {
+    #form-buscar {
+        margin-bottom: 15px;
+    }
+
+    #txt-banner {
+        margin-bottom: 15px;
+    }
+
+    .login {
+        height: revert;
+    }
+
+    .container {
+        margin-bottom: 1rem;
+    } 
+
+}
+
